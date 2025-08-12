@@ -11,11 +11,21 @@ import tensorflow as tf
 import os
 import numpy as np
 
+
 config_data = configureData()
 config_model = configureModel()
 
+config_data['PREDICTION_DATA_DIR'] = r"D:\\Image-Classify-UI(CatDog)\\prediction"
+
+print("config_data keys:", config_data.keys())
+print("PREDICTION_DATA_DIR in config_data?", 'PREDICTION_DATA_DIR' in config_data)
+
+config_data['PREDICTION_DATA_DIR'] = r"D:\\Image-Classify-UI(CatDog)\\prediction"
+
+
 #Manage Image
 image_list = os.listdir(config_data['PREDICTION_DATA_DIR'])
+
 
 
 def predict():
@@ -40,6 +50,10 @@ def predict():
     model = tf.keras.models.load_model(model_path)
     for image in image_list:
         predict = dm.manage_input_data(os.path.join(config_data['PREDICTION_DATA_DIR'],image))
+
+        print("Loaded data shape:", None if predict is None else predict.shape)
+         
+
         result = model.predict(predict)
         results = np.argmax(result, axis=-1)
         print(f"Original image : {image}. Predicted as {results}")

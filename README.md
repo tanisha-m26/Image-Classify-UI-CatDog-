@@ -12,11 +12,11 @@ This repository hosts the development of the ImageSeeker library.
   
 ## Authors
 
-- [@Bappy Ahmed](https://www.linkedin.com/in/boktiarahmed73/)
+- [@Tanisha Mangliya](https://www.linkedin.com/in/tanisha-mangliya-b720b8256/)
 
-Email: entbappy73@gmail.com
+Email: tanishamangliya@gmail.com
 
-Github: https://github.com/entbappy/
+Github: https://github.com/tanisha-m26/
   
 ## 🚀 About Me
 I'm a Data Science learner. This library I have implemented just for learning purpose.
@@ -348,7 +348,7 @@ Original image : dog.2002.jpg. Predicted as [1]
 You have to just clone ImageSeeker and install reqiurements.txt
 
 ```bash
- git clone https://github.com/entbappy/ImageSeeker-An-Image-Classification-Library.git
+ git clone https://github.com/tanisha-m26/Image-Classify-UI-CatDog-.git
 ```
 
 Now locate your terminal to ImageSeeker directory

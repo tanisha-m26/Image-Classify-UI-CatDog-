@@ -1,4 +1,4 @@
-from tensorflow.keras.applications import Xception,VGG16,VGG19,ResNet50,ResNet101,ResNet152,ResNet50V2,ResNet101V2
+from tensorflow.keras.applications import Xception,VGG16,VGG19,ResNet50,ResNet50V2,ResNet101V2
 from tensorflow.keras.applications import ResNet152V2,InceptionV3,MobileNet,MobileNetV2,DenseNet121,DenseNet169
 from tensorflow.keras.applications import DenseNet201,NASNetMobile,EfficientNetB0,EfficientNetB1,EfficientNetB2
 
@@ -81,3 +81,4 @@ def return_model(model_name):
         core_model = EfficientNetB2(include_top=False, weights="imagenet", input_shape=(224, 224, 3))
 
     return core_model
+

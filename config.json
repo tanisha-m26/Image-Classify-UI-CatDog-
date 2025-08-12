@@ -1,0 +1,1 @@
+{"TRAIN_DATA_DIR": "D:\\Image-Classify-UI(CatDog)\\data\\train", "VALID_DATA_DIR": "D:\\Image-Classify-UI(CatDog)\\data\\valid", "AUGMENTATION": "True", "CLASSES": 2, "IMAGE_SIZE": "224,224,3", "BATCH_SIZE": 16, "MODEL_OBJ": "VGG16", "MODEL_NAME": "VGG16", "EPOCHS": 2, "FREEZE_ALL": "True", "OPTIMIZER": "Adam", "LOSS_FUNC": "categorical_crossentropy"}

@@ -1,0 +1,2 @@
+TRAIN_DATA_DIR,VALID_DATA_DIR,PREDICTION_DATA_DIR,AUGMENTATION,CLASSES,IMAGE_SIZE,BATCH_SIZE,MODEL_OBJ,MODEL_NAME,EPOCHS,FREEZE_ALL,OPTIMIZER,LOSS_FUNC
+D:\\Image-Classify-UI(CatDog)\\data\\train,D:\\Image-Classify-UI(CatDog)\\data\\valid,D:\\Image-Classify-UI(CatDog)\\prediction,TRUE,2,"224,224,3",16,VGG16,VGG16,2,TRUE,Adam,categorical_crossentropy

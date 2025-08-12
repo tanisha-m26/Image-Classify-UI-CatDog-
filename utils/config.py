@@ -6,16 +6,23 @@ import warnings
 from utils import models_config as mc
 import pandas as pd
 
+
+
 """Public ImageSeeker utilities.
 This module is used as a shortcut to access all the symbols. Those symbols was
 exposed under train engine and predict engine.
 """
 df = pd.read_csv('input_data.csv')
 
+print("CSV columns:", df.columns.tolist())
+print(df.head())
+
 #Data config
 TRAIN_DATA_DIR = df['TRAIN_DATA_DIR'][0]
 print(TRAIN_DATA_DIR)
 VALID_DATA_DIR = df['VALID_DATA_DIR'][0]
+PREDICTION_DATA_DIR = df['PREDICTION_DATA_DIR'][0] 
+
 CLASSES = df['CLASSES'][0]
 SIZE = df['IMAGE_SIZE'].values[0].split(',')
 h = int(SIZE[0])
@@ -37,17 +44,26 @@ FREEZE_ALL = df['FREEZE_ALL'][0]
 
 
 
-def configureData(TRAIN_DATA_DIR = TRAIN_DATA_DIR, VALID_DATA_DIR = VALID_DATA_DIR, AUGMENTATION = AUGMENTATION, CLASSES = CLASSES, IMAGE_SIZE = IMAGE_SIZE, BATCH_SIZE = BATCH_SIZE):
+def configureData(TRAIN_DATA_DIR = TRAIN_DATA_DIR, VALID_DATA_DIR = VALID_DATA_DIR, PREDICTION_DATA_DIR = PREDICTION_DATA_DIR, AUGMENTATION = AUGMENTATION, CLASSES = CLASSES, IMAGE_SIZE = IMAGE_SIZE, BATCH_SIZE = BATCH_SIZE):
     CONFIG = {
         'TRAIN_DATA_DIR' : TRAIN_DATA_DIR,
         'VALID_DATA_DIR' : VALID_DATA_DIR,
+        'PREDICTION_DATA_DIR': PREDICTION_DATA_DIR, 
         'AUGMENTATION': AUGMENTATION,
         'CLASSES' : CLASSES,
         'IMAGE_SIZE' : IMAGE_SIZE,
         'BATCH_SIZE' : BATCH_SIZE,
     }
 
-    return CONFIG
+    return {
+        "TRAIN_DATA_DIR": "D:\\Image-Classify-UI(CatDog)\\data\\train",
+        "VALID_DATA_DIR": "D:\\Image-Classify-UI(CatDog)\\data\\valid",
+        "PREDICTION_DATA_DIR": "D:\\Image-Classify-UI(CatDog)\\prediction",   # ADD THIS
+        "AUGMENTATION": True,
+        "CLASSES": ["cat", "dog"],
+        "IMAGE_SIZE": (224, 224, 3),
+        "BATCH_SIZE": 32
+    } 
 
 
 

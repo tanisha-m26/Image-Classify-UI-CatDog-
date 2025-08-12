@@ -1,7 +1,7 @@
 '''
-@author: Bappy Ahmed
-Email: entbappy73@gmail.com
-Date: 06-sep-2021
+@author: Tanisha Mangliya
+Email: tanishamangliya@gmail.com
+Date: 12-08-2025
 '''
 
 from tensorflow.keras.applications import ResNet50
@@ -9,13 +9,13 @@ from tensorflow.keras.applications import VGG16
 
 # Configure your data
 
-TRAIN_DATA_DIR = "H:\\Parsonal\\Coding Practice\\iNeuron\\Moduler Coding\\ImageSeeker\\data\\train"        # Your training data path
-VALID_DATA_DIR = "H:\\Parsonal\\Coding Practice\\iNeuron\\Moduler Coding\\ImageSeeker\\data\\valid"       # Your validation data path
+TRAIN_DATA_DIR = "D:\Image-Classify-UI(CatDog)\data\train"        # Your training data path
+VALID_DATA_DIR = "D:\Image-Classify-UI(CatDog)\data\valid"       # Your validation data path
 CLASSES = 2                                                                                               # Number of classes in your data
 IMAGE_SIZE = (224,224,3)                                                                                  #Image resulution/dimention with respect to your classification models
 AUGMENTATION = True                                                                                       # If you want to apply Augmentation in your data (Default is True)
 BATCH_SIZE = 32                                                                                           # Number of batch  (Default is 32)
-PREDICTION_DATA_DIR = 'H:\\Parsonal\\\Coding Practice\\iNeuron\\Moduler Coding\\ImageSeeker\\prediction'  # Your prediction/test data path
+PREDICTION_DATA_DIR = 'D:\Image-Classify-UI(CatDog)\data\predict'  # Your prediction/test data path
 
 ##################################################################################################
 #----------------------------------- Configure Your Data & Model ---------------------------------
