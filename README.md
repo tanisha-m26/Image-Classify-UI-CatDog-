@@ -401,7 +401,6 @@ After cloning the folder structure should look like that...
 ## Acknowledgements
 
  - [Keras](https://keras.io/)
- - [SUNNY BHAVEEN CHANDRA](https://github.com/c17hawke/basic-CNN-app)
  - [Python](https://docs.python.org/3/)
 
   
